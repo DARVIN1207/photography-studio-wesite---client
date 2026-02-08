@@ -1,0 +1,52 @@
+[
+  {
+    "id": "pkg_silver",
+    "title": "Silver Package",
+    "price": 45000,
+    "shootType": "Wedding",
+    "description": "Perfect for intimate weddings.",
+    "features": [
+      "6 Hours Coverage",
+      "1 Cinematographer",
+      "1 Photographer",
+      "200 Edited Photos",
+      "3-4 Minute Highlight Video"
+    ],
+    "isPopular": false
+  },
+  {
+    "id": "pkg_gold",
+    "title": "Gold Package",
+    "price": 85000,
+    "shootType": "Wedding",
+    "description": "Our most requested comprehensive coverage.",
+    "features": [
+      "10 Hours Coverage",
+      "2 Cinematographers",
+      "2 Photographers",
+      "400 Edited Photos",
+      "8-10 Minute Cinematic Film",
+      "Drone Coverage",
+      "Instagram Teaser (1 min)"
+    ],
+    "isPopular": true
+  },
+  {
+    "id": "pkg_platinum",
+    "title": "Platinum Package",
+    "price": 150000,
+    "shootType": "Wedding",
+    "description": "The ultimate cinematic experience.",
+    "features": [
+      "Full Day Coverage (Unlimited Hours)",
+      "3 Cinematographers",
+      "2 Photographers",
+      "Unlimited Edited Photos",
+      "Documentary Style Full Film (60+ mins)",
+      "Premium Drone Shots",
+      "Pre-Wedding Shoot Included",
+      "Same Day Edit (Photo/Video)"
+    ],
+    "isPopular": false
+  }
+]
