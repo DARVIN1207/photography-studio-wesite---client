@@ -96,71 +96,98 @@
                     Our Work</p>
                 <h2 style="font-size: 3.5rem;">Selected <span class="text-gold">Portfolio</span></h2>
 
-                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
-                    <button class="filter-btn active" onclick="filterPortfolio('all')">All</button>
-                    <button class="filter-btn" onclick="filterPortfolio('wedding')">Wedding</button>
-                    <button class="filter-btn" onclick="filterPortfolio('model')">Model</button>
-                    <button class="filter-btn" onclick="filterPortfolio('outdoor')">Outdoor</button>
+                <div class="portfolio-filters fade-in">
+                    <button class="filter-btn active" data-filter="all">ALL</button>
+                    <button class="filter-btn" data-filter="wedding">WEDDING</button>
+                    <button class="filter-btn" data-filter="kids">KIDS</button>
+                    <button class="filter-btn" data-filter="outdoor">OUTDOOR</button>
+                    <button class="filter-btn" data-filter="bride">BRIDE SHOOT</button>
+                </div>
+
+                <div class="portfolio-grid" id="portfolioGrid">
+                    <!-- Wedding -->
+                    <div class="portfolio-item wedding glass-card fade-in" style="padding: 0; overflow: hidden;">
+                        <img src="portfolio/custom1.jpg" alt="Wedding" style="width: 100%; display: block;">
+                        <div style="padding: 1rem;">
+                            <h4 style="margin: 0; color: var(--primary-gold);">Royal Wedding</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">Traditional</span>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item outdoor glass-card fade-in"
+                        style="padding: 0; overflow: hidden; animation-delay: 0.1s;">
+                        <img src="portfolio/custom2.jpg" alt="Couple Shoot" style="width: 100%; display: block;">
+                        <div style="padding: 1rem;">
+                            <h4 style="margin: 0; color: var(--primary-gold);">Couple Shoot</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">Romance</span>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item bride glass-card fade-in"
+                        style="padding: 0; overflow: hidden; animation-delay: 0.2s;">
+                        <img src="portfolio/custom3.jpg" alt="Traditional" style="width: 100%; display: block;">
+                        <div style="padding: 1rem;">
+                            <h4 style="margin: 0; color: var(--primary-gold);">Traditional</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">Bride Shoot</span>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item wedding glass-card fade-in"
+                        style="padding: 0; overflow: hidden; animation-delay: 0.3s;">
+                        <img src="portfolio/video-thumb1.jpg" style="width: 100%; display: block;">
+                        <div style="padding: 1rem;">
+                            <h4 style="margin: 0; color: var(--primary-gold);">Wedding Highlights</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">Cinematic</span>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item bride glass-card fade-in"
+                        style="padding: 0; overflow: hidden; animation-delay: 0.4s;">
+                        <img src="portfolio/video-thumb2.jpg" style="width: 100%; display: block;">
+                        <div style="padding: 1rem;">
+                            <h4 style="margin: 0; color: var(--primary-gold);">Fashion Edit</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">Bride Shoot</span>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item outdoor glass-card fade-in"
+                        style="padding: 0; overflow: hidden; animation-delay: 0.5s;">
+                        <img src="portfolio/video-thumb3.jpg" style="width: 100%; display: block;">
+                        <div style="padding: 1rem;">
+                            <h4 style="margin: 0; color: var(--primary-gold);">Nature's Beauty</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">Outdoor</span>
+                        </div>
+                    </div>
+
+                    <!-- Kids Category -->
+                    <div class="portfolio-item kids glass-card fade-in"
+                        style="padding: 0; overflow: hidden; animation-delay: 0.3s;">
+                        <img src="portfolio/kids-new-1.jpg" style="width: 100%; display: block;">
+                        <div style="padding: 1rem;">
+                            <h4 style="margin: 0; color: var(--primary-gold);">Divine Cuteness</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">Baby Shoot</span>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item kids glass-card fade-in"
+                        style="padding: 0; overflow: hidden; animation-delay: 0.4s;">
+                        <img src="portfolio/kids-new-2.jpg" style="width: 100%; display: block;">
+                        <div style="padding: 1rem;">
+                            <h4 style="margin: 0; color: var(--primary-gold);">Graceful Steps</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">Kids Portrait</span>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item kids glass-card fade-in"
+                        style="padding: 0; overflow: hidden; animation-delay: 0.5s;">
+                        <img src="portfolio/kids-new-3.jpg" style="width: 100%; display: block;">
+                        <div style="padding: 1rem;">
+                            <h4 style="margin: 0; color: var(--primary-gold);">Little Captain</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">Theme Shoot</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="portfolio-grid" id="portfolioGrid">
-                <!-- Wedding -->
-                <div class="portfolio-item wedding glass-card fade-in" style="padding: 0; overflow: hidden;">
-                    <img src="portfolio/custom1.jpg" alt="Wedding" style="width: 100%; display: block;">
-                    <div style="padding: 1rem;">
-                        <h4 style="margin: 0; color: var(--primary-gold);">Royal Wedding</h4>
-                        <span style="font-size: 0.8rem; color: var(--text-muted);">Traditional</span>
-                    </div>
-                </div>
-
-                <div class="portfolio-item outdoor glass-card fade-in"
-                    style="padding: 0; overflow: hidden; animation-delay: 0.1s;">
-                    <img src="portfolio/custom2.jpg" alt="Couple Shoot" style="width: 100%; display: block;">
-                    <div style="padding: 1rem;">
-                        <h4 style="margin: 0; color: var(--primary-gold);">Couple Shoot</h4>
-                        <span style="font-size: 0.8rem; color: var(--text-muted);">Romance</span>
-                    </div>
-                </div>
-
-                <div class="portfolio-item model glass-card fade-in"
-                    style="padding: 0; overflow: hidden; animation-delay: 0.2s;">
-                    <img src="portfolio/custom3.jpg" alt="Traditional" style="width: 100%; display: block;">
-                    <div style="padding: 1rem;">
-                        <h4 style="margin: 0; color: var(--primary-gold);">Traditional</h4>
-                        <span style="font-size: 0.8rem; color: var(--text-muted);">Culture</span>
-                    </div>
-                </div>
-
-                <!-- Kids Category -->
-                <div class="portfolio-item kids glass-card fade-in"
-                    style="padding: 0; overflow: hidden; animation-delay: 0.3s;">
-                    <img src="portfolio/kids-new-1.jpg" style="width: 100%; display: block;">
-                    <div style="padding: 1rem;">
-                        <h4 style="margin: 0; color: var(--primary-gold);">Divine Cuteness</h4>
-                        <span style="font-size: 0.8rem; color: var(--text-muted);">Baby Shoot</span>
-                    </div>
-                </div>
-
-                <div class="portfolio-item kids glass-card fade-in"
-                    style="padding: 0; overflow: hidden; animation-delay: 0.4s;">
-                    <img src="portfolio/kids-new-2.jpg" style="width: 100%; display: block;">
-                    <div style="padding: 1rem;">
-                        <h4 style="margin: 0; color: var(--primary-gold);">Graceful Steps</h4>
-                        <span style="font-size: 0.8rem; color: var(--text-muted);">Kids Portrait</span>
-                    </div>
-                </div>
-
-                <div class="portfolio-item kids glass-card fade-in"
-                    style="padding: 0; overflow: hidden; animation-delay: 0.5s;">
-                    <img src="portfolio/kids-new-3.jpg" style="width: 100%; display: block;">
-                    <div style="padding: 1rem;">
-                        <h4 style="margin: 0; color: var(--primary-gold);">Little Captain</h4>
-                        <span style="font-size: 0.8rem; color: var(--text-muted);">Theme Shoot</span>
-                    </div>
-                </div>
-            </div>
-        </div>
     </main>
 
     <!-- Footer -->
@@ -199,24 +226,40 @@
 
     <script src="script.js"></script>
     <script>
-        function filterPortfolio(category) {
-            // Button Active State
-            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            // Filtering
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
             const items = document.querySelectorAll('.portfolio-item');
-            items.forEach(item => {
-                const isMatch = category === 'all' || item.classList.contains(category);
-                if (isMatch) {
-                    item.style.display = 'block';
-                    setTimeout(() => item.style.opacity = '1', 10);
-                } else {
-                    item.style.opacity = '0';
-                    setTimeout(() => item.style.display = 'none', 300);
-                }
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // 1. Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // 2. Add active class to clicked button
+                    btn.classList.add('active');
+
+                    // 3. Get filter value
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    // 4. Filter items
+                    items.forEach(item => {
+                        if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                            item.style.display = 'block';
+                            // Small delay to allow display:block to apply before opacity transition
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 10);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.9)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300); // Wait for transition
+                        }
+                    });
+                });
             });
-        }
+        });
     </script>
 </body>
 
