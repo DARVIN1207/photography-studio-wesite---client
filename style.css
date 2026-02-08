@@ -556,4 +556,195 @@ img {
     .home-portfolio-grid {
         grid-template-columns: 1fr;
     }
+
+    /* 1. Global Typography & Spacing */
+    :root {
+        --section-spacing: 80px;
+        --container-width: 100%;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        line-height: 1.3;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* 2. Header & Nav Refinements */
+    .main-header {
+        height: 64px !important;
+        background: rgba(5, 5, 5, 0.95) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        justify-content: center !important;
+        /* Ensure centered content */
+    }
+
+    .container.header-container {
+        /* Target specifically if class added, or assume default */
+        justify-content: center !important;
+    }
+
+    /* Ensure Logo is perfectly centered vertically */
+    .main-header .container>a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        align-items: center;
+        z-index: 2000;
+    }
+
+    .studio-name {
+        font-size: 1.1rem !important;
+        margin-bottom: 0 !important;
+        white-space: nowrap;
+    }
+
+    .studio-subtitle {
+        display: none !important;
+    }
+
+    .gold-underline {
+        display: none !important;
+    }
+
+    .nav-link,
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .top-info-bar {
+        display: none !important;
+    }
+
+    /* 3. Hero Section */
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem !important;
+        align-items: center;
+    }
+
+    .hero-actions .btn {
+        width: 80%;
+        justify-content: center;
+        font-size: 0.85rem;
+        padding: 12px 24px;
+        margin: 0 auto;
+    }
+
+    /* 4. Bottom Navigation (Crucial for Mobile) */
+    .bottom-nav {
+        display: flex !important;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+        max-width: 400px;
+        padding: 10px 0;
+        bottom: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(10, 10, 10, 0.9);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 40px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+    }
+
+    .bottom-nav-item {
+        min-width: auto;
+        flex: 1;
+        gap: 2px;
+        color: #666;
+    }
+
+    .bottom-nav-item.active {
+        color: var(--primary-gold);
+        background: transparent;
+        /* Remove bg on active */
+    }
+
+    .bottom-nav-item.active::after {
+        bottom: -4px;
+        /* Move dot lower */
+    }
+
+    .bottom-nav-item svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .bottom-nav-item span {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+        display: block;
+        margin-top: 4px;
+    }
+
+    /* 5. Forms & Inputs */
+    input,
+    textarea,
+    select {
+        font-size: 16px !important;
+        padding: 12px !important;
+        width: 100%;
+    }
+
+    .glass-card form {
+        grid-template-columns: 1fr !important;
+        /* Force 1 column form */
+        gap: 1.5rem;
+    }
+
+    .glass-card form>div {
+        grid-column: span 1 !important;
+    }
+
+    /* 6. Cards & Grid */
+    .glass-card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Fix for ultra-small screens */
+@media (max-width: 380px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .bottom-nav-item span {
+        display: none;
+    }
+
+    .bottom-nav-item svg {
+        width: 24px;
+        height: 24px;
+    }
 }
