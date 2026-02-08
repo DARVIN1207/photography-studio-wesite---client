@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Trash2, Plus, Image as ImageIcon } from 'lucide-react';
-import { API_BASE_URL } from '../utils/api';
+
 
 function AdminPage() {
     const [photos, setPhotos] = useState([]);
@@ -14,62 +14,25 @@ function AdminPage() {
     }, []);
 
     const fetchPhotos = async () => {
-        try {
-            const response = await fetch(`${API_BASE_URL}/media`);
-            if (!response.ok) {
-                // If backend is missing (e.g. GitHub Pages), just show empty or handle gracefully
-                console.warn("Backend not available");
-                return;
-            }
-            const data = await response.json();
-            setPhotos(data);
-        } catch (error) {
-            console.error('Error fetching photos:', error);
-            setError("Backend not connected. Admin features are disabled on static hosting.");
-        }
+        // Simulation: No backend on GitHub Pages.
+        // In a real expanded static site, this could load a JSON file.
+        setPhotos([]);
     };
 
     const handleUpload = async (e) => {
         e.preventDefault();
         setLoading(true);
-        try {
-            const response = await fetch(`${API_BASE_URL}/media`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(newPhoto),
-            });
-
-            if (response.ok) {
-                setNewPhoto({ url: '', category: 'Wedding', title: '' });
-                fetchPhotos(); // Refresh list
-            } else {
-                alert("Failed to upload. Backend may be offline or read-only.");
-            }
-        } catch (error) {
-            console.error('Error uploading photo:', error);
-            alert("Error uploading photo. Check console.");
-        } finally {
+        // Simulate upload delay
+        setTimeout(() => {
+            alert("This is a static demo on GitHub Pages. Backend upload is disabled. To enable this, you need a Node.js server.");
             setLoading(false);
-        }
+            setNewPhoto({ url: '', category: 'Wedding', title: '' });
+        }, 1000);
     };
 
     const handleDelete = async (id) => {
         if (!window.confirm('Are you sure you want to delete this photo?')) return;
-
-        try {
-            const response = await fetch(`${API_BASE_URL}/media/${id}`, {
-                method: 'DELETE',
-            });
-            if (response.ok) {
-                fetchPhotos();
-            } else {
-                alert("Failed to delete. Backend might be read-only.");
-            }
-        } catch (error) {
-            console.error('Error deleting photo:', error);
-        }
+        alert("Delete is disabled on static demo.");
     };
 
     return (

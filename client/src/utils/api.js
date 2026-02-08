@@ -1,34 +1,22 @@
-export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+// Simulate backend data for static GitHub Pages hosting
+const MOCK_PACKAGES = [
+    { title: 'Gold Package', price: '₹50,000', features: ['Photo + Video', 'Design Album'] },
+    { title: 'Silver Package', price: '₹35,000', features: ['Photo Only', 'Soft Copy'] },
+    { title: 'Platinum Package', price: '₹80,000', features: ['Cinematic Video', 'Drone', 'Premium Album'] }
+];
 
 export async function fetchPackages() {
-    try {
-        const response = await fetch(`${API_BASE_URL}/packages`);
-        if (!response.ok) throw new Error('Failed to fetch packages');
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.warn("API Error (fetchPackages):", error);
-        // Fallback or empty array
-        return [];
-    }
+    // Return mock data immediately
+    return Promise.resolve(MOCK_PACKAGES);
 }
 
 export async function createBooking(bookingData) {
-    try {
-        const response = await fetch(`${API_BASE_URL}/bookings/create`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(bookingData),
-        });
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return await response.json();
-    } catch (error) {
-        console.warn("Booking API Error (createBooking):", error);
-        // Return a mock success so the UI can proceed to WhatsApp
-        return { success: false, message: 'Network error, falling back to WhatsApp' };
-    }
+    console.log("Mock Booking Created:", bookingData);
+    // Return success to trigger WhatsApp redirect
+    return Promise.resolve({ success: true, message: 'Redirecting to WhatsApp...', booking: bookingData });
 }
+
+// Helper for image URLs (if needed in future)
+export const getImageUrl = (path) => {
+    return path; // Basic pass-through for static assets
+};
