@@ -11,13 +11,14 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon-circle.png">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         .dark-input {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
             /* var(--border-glass) */
-            color: white;
+            color: #333;
             padding: 15px;
             border-radius: 8px;
             font-family: var(--font-body);
@@ -28,12 +29,19 @@
 
         .dark-input:focus {
             border-color: var(--primary-gold);
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
         }
 
         option {
-            background: #111;
-            color: white;
+            background: #fff;
+            color: #333;
+        }
+
+        /* Adjust placeholder color */
+        ::placeholder {
+            color: #000;
+            opacity: 0.6;
         }
     </style>
 </head>
@@ -57,7 +65,7 @@
                 <span class="gold-underline"
                     style="display: block; width: 100%; height: 1px; margin-top: 6px; background: linear-gradient(90deg, transparent, var(--primary-gold), transparent); transform-origin: left; animation: underlineDrawIn 1.2s ease-out 0.3s forwards;"></span>
                 <span class="studio-subtitle"
-                    style="font-size: 0.6rem; color: #888; letter-spacing: 0.25em; margin-top: 4px; font-weight: 300;">PHOTOGRAPHY
+                    style="font-size: 0.6rem; color: #000; letter-spacing: 0.25em; margin-top: 4px; font-weight: 300;">PHOTOGRAPHY
                     STUDIO</span>
             </a>
 
@@ -88,25 +96,24 @@
                         <div class="glass-card" style="display: flex; align-items: center; gap: 1rem; padding: 1.5rem;">
                             <i data-lucide="phone" class="text-gold" width="24"></i>
                             <div>
-                                <h5 style="margin: 0; font-size: 0.9rem; color: var(--text-muted);">Phone</h5>
-                                <a href="https://wa.me/918124735262" style="color: var(--text-main);">+91 81247
+                                <h5 style="margin: 0; font-size: 0.9rem; color: #000;">Phone</h5>
+                                <a href="https://wa.me/918124735262" style="color: #000;">+91 81247
                                     35262</a>
                             </div>
                         </div>
                         <div class="glass-card" style="display: flex; align-items: center; gap: 1rem; padding: 1.5rem;">
                             <i data-lucide="mail" class="text-gold" width="24"></i>
                             <div>
-                                <h5 style="margin: 0; font-size: 0.9rem; color: var(--text-muted);">Email</h5>
-                                <a href="mailto:srmanimoni@gmail.com"
-                                    style="color: var(--text-main);">srmanimoni@gmail.com</a>
+                                <h5 style="margin: 0; font-size: 0.9rem; color: #000;">Email</h5>
+                                <a href="mailto:srmanimoni@gmail.com" style="color: #000;">srmanimoni@gmail.com</a>
                             </div>
                         </div>
                         <div class="glass-card" style="display: flex; align-items: center; gap: 1rem; padding: 1.5rem;">
                             <i data-lucide="map-pin" class="text-gold" width="24"></i>
                             <div>
-                                <h5 style="margin: 0; font-size: 0.9rem; color: var(--text-muted);">Location</h5>
+                                <h5 style="margin: 0; font-size: 0.9rem; color: #000;">Location</h5>
                                 <a href="https://www.google.com/maps/place/9%C2%B021'29.7%22N+78%C2%B050'25.4%22E/@9.3581098,78.8405582,75m/data=!3m1!1e3!4m4!3m3!8m2!3d9.3582439!4d78.8403931?hl=en&entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D"
-                                    target="_blank" style="color: var(--text-main);">View on Map</a>
+                                    target="_blank" style="color: #000;">View on Map</a>
                             </div>
                         </div>
                         <div style="display: flex; gap: 1rem; margin-top: 1rem;">
@@ -125,7 +132,7 @@
                         <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
                             <div>
                                 <label
-                                    style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--text-muted);">Your
+                                    style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem; color: #000;">Your
                                     Name</label>
                                 <input type="text" id="name" required class="dark-input"
                                     placeholder="Enter your full name">
@@ -134,7 +141,7 @@
                             <div style="display: grid; grid-template-columns: 100px 1fr; gap: 1rem;">
                                 <div>
                                     <label
-                                        style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--text-muted);">Code</label>
+                                        style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem; color: #000;">Code</label>
                                     <select id="countryCode" class="dark-input">
                                         <option value="+91">+91</option>
                                         <option value="+1">+1</option>
@@ -144,7 +151,7 @@
                                 </div>
                                 <div>
                                     <label
-                                        style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--text-muted);">Phone
+                                        style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem; color: #000;">Phone
                                         Number</label>
                                     <input type="tel" id="mobile" required class="dark-input"
                                         placeholder="Enter your number">
@@ -153,14 +160,14 @@
 
                             <div>
                                 <label
-                                    style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--text-muted);">Event
+                                    style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem; color: #000;">Event
                                     Date</label>
                                 <input type="date" id="date" required class="dark-input">
                             </div>
 
                             <div>
                                 <label
-                                    style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--text-muted);">Coverage
+                                    style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem; color: #000;">Coverage
                                     Type</label>
                                 <select id="type" class="dark-input">
                                     <option>Wedding</option>
@@ -173,7 +180,7 @@
 
                             <div>
                                 <label
-                                    style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--text-muted);">Details</label>
+                                    style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem; color: #000;">Details</label>
                                 <textarea id="message" rows="4" class="dark-input"
                                     placeholder="Tell us about your story..."></textarea>
                             </div>
@@ -192,7 +199,7 @@
         <div class="container">
             <div class="glass-card" style="padding: 3rem; text-align: center; border-radius: 32px;">
                 <h2 style="margin-bottom: 0.5rem; letter-spacing: 0.05em;">SR CINEMATIC</h2>
-                <p style="color: var(--text-muted); margin-bottom: 2rem;">Capturing Life, Creating Art.</p>
+                <p style="color: #000; margin-bottom: 2rem;">Capturing Life, Creating Art.</p>
                 <div style="display: flex; justify-content: center; gap: 3rem; margin-bottom: 2rem; flex-wrap: wrap;">
                     <a href="https://www.instagram.com/sr_cinematic_65?igsh=MXU1ajNkazh2cDNqbg%3D%3D" target="_blank"
                         style="display: flex; align-items: center; gap: 0.5rem; font-weight: 600;"><i
@@ -205,7 +212,8 @@
                             data-lucide="mail"></i> Mail</a>
                 </div>
                 <div
-                    style="font-size: 0.9rem; color: #888; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem;">
+                    style="font-size: 0.9rem; color: #000; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 1.5rem;">
+                    min-height: 100vh;">
                     &copy; 2026 SR Cinematic - Developed by SCODE. All rights reserved.
                 </div>
             </div>
