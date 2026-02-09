@@ -302,6 +302,20 @@ img {
     gap: 2.5rem;
 }
 
+/* Tablet/Laptop Adjustment to prevent overlap */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .main-header .container {
+        justify-content: space-between !important;
+    }
+
+    .main-header .container>a {
+        position: relative;
+        left: auto;
+        transform: none;
+        margin-right: auto;
+    }
+}
+
 /* Mobile Nav */
 @media (max-width: 768px) {
     .top-info-bar {
