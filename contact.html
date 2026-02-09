@@ -223,6 +223,11 @@
 
     <script src="script.js"></script>
     <script>
+        // Set Date Input Min to Today
+        const dateInput = document.getElementById('date');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('min', today);
+
         function sendToWhatsApp(e) {
             e.preventDefault();
             const name = document.getElementById('name').value;
@@ -231,6 +236,17 @@
             const date = document.getElementById('date').value;
             const type = document.getElementById('type').value;
             const details = document.getElementById('message').value;
+
+            // Validation
+            if (mobile.length !== 10 || isNaN(mobile)) {
+                alert("Please enter a valid 10-digit phone number.");
+                return;
+            }
+
+            if (date < today) {
+                alert("Please select a valid upcoming date.");
+                return;
+            }
 
             const text = `*New Booking Request*%0A%0A*Name:* ${name}%0A*Phone:* ${code} ${mobile}%0A*Date:* ${date}%0A*Type:* ${type}%0A*Details:* ${details}`;
 
