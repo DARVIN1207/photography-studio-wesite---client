@@ -1,0 +1,93 @@
+/* ============================
+   NEW HERO UPDATES (Deep Black & Gold)
+   ============================ */
+
+/* Hero Section Background Override */
+.hero-section-dark {
+    background-color: #050505;
+    /* Deep Black */
+    color: #FFFFFF;
+}
+
+/* New Cinematic Brand Title */
+.hero-brand-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+    text-align: center;
+    cursor: default;
+
+    /* Gold Gradient Text */
+    background: linear-gradient(135deg,
+            #BF953F 0%,
+            #FCF6BA 25%,
+            #B38728 50%,
+            #FBF5B7 75%,
+            #AA771C 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    /* Animations */
+    opacity: 0;
+    transform: scale(0.9) translateY(30px);
+    animation:
+        heroEnter 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards,
+        goldSweep 4s linear infinite;
+
+    transition: transform 0.4s ease, text-shadow 0.4s ease, filter 0.4s ease;
+}
+
+/* Hover Effect */
+.hero-brand-title:hover {
+    transform: scale(1.05);
+    /* Slight scale increase */
+    filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.5));
+    /* Soft glow */
+}
+
+/* Entrance Animation */
+@keyframes heroEnter {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Continuous Gold Light Sweep */
+@keyframes goldSweep {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* Responsive Scaling */
+@media (max-width: 1024px) {
+    .hero-brand-title {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-brand-title {
+        font-size: 2.8rem;
+        /* Responsive without breaking alignment */
+        letter-spacing: 0.02em;
+        margin-bottom: 1.5rem;
+    }
+}
