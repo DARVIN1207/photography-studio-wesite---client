@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://srcinematicstudio.in/sitemap.xml
