@@ -34,4 +34,4 @@ def create_circular_logo(input_path, output_path):
     img.save(output_path, "PNG")
 
 if __name__ == "__main__":
-    create_circular_logo("updated logo.jpeg", "favicon-circle.png")
+    create_circular_logo("logo.jpeg", "favicon-circle.png")
